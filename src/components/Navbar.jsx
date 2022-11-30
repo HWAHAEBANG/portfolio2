@@ -28,8 +28,15 @@ export default function Navbar({ filters, filter, onClick }) {
           ))}
         </ul>
         <div className={styles.link}>
-          <SiNotion className={styles.notionBtn} />
-          <SiGithub className={styles.githubBtn} />
+          <a
+            href='https://lake-magician-e71.notion.site/HHB-5f3fdec1e37b48798f4712432456de0e'
+            target='_blank'
+          >
+            <SiNotion className={styles.notionBtn} />
+          </a>
+          <a href='https://github.com/HWAHAEBANG' target='_blank'>
+            <SiGithub className={styles.githubBtn} />
+          </a>
         </div>
       </div>
     </nav>

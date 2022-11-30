@@ -59,3 +59,25 @@
   transform: scale(1.1);
   transition: fransform scale 0.1s ease-in-out;
 }
+
+.hoverText {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  height: 93.3%;
+  width: 94.5%;
+  margin-left: 28px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  /* z-index: -3; */
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+  color: white;
+  padding: 100px 200px 0 200px;
+  line-height: 25px;
+}
+
+.hoverText:hover {
+  opacity: 0.8;
+}

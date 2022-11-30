@@ -71,6 +71,10 @@
   font-size: 40px;
 }
 
+.link a {
+  color: black;
+}
+
 .notionBtn:hover,
 .githubBtn:hover {
   transform: scale(1.2);

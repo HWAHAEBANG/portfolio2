@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  position: absolute;
+  top: 50px;
+  left: 23px;
+  background-color: white;
+  width: 761px;
+  height: 471px;
+  border-radius: 21px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+}
+
+.form label {
+  float: right;
+}

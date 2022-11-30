@@ -4,8 +4,11 @@ import styles from "./App.module.css";
 import Navbar from "./components/Navbar";
 import ReactPlayer from "react-player";
 import Page4 from "./pages/Page4.jsx";
+import emailjs from "@emailjs/browser";
 
 import { useInView } from "react-intersection-observer";
+import { SiResurrectionremixos } from "react-icons/si";
+import SendEmail from "./components/SendEmail";
 
 const filters = ["INTRO", "ABOUT", "STACKS", "PORTFOLIO", "CONTACT"];
 const DIVIDER_HEIGHT = 0;
@@ -13,8 +16,10 @@ const DIVIDER_HEIGHT = 0;
 function App() {
   /* try */
   const { ref: myRef, inView: myElementIsVisible /* entry */ } = useInView();
-  const { ref: page2TitleRef, inView: page2TitleIsVisible /* entry */ } =
-    useInView();
+  const { ref: page2Ref, inView: page2IsVisible /* entry */ } = useInView();
+  const { ref: page3Ref, inView: page3IsVisible /* entry */ } = useInView();
+  const { ref: page4Ref, inView: page4IsVisible /* entry */ } = useInView();
+  const { ref: page5Ref, inView: page5IsVisible /* entry */ } = useInView();
 
   // const myRef = useRef();
   // const [myElementIsVisible, setMyElementIsVisible] = useState();
@@ -183,7 +188,7 @@ function App() {
             controls={false}
             // loop={true}
             muted={true}
-            style={{ filter: scrollIndex === 1 ? "none" : "blur(5px)" }}
+            style={{ filter: scrollIndex === 0 ? "none" : "blur(5px)" }}
           />
           <div className={`${styles.inner} ${styles.page1_text}`}>
             <h2 ref={myRef}>
@@ -196,23 +201,35 @@ function App() {
         </section>
         <section className={`${styles.inner} ${styles.page2}`}>
           <div className={styles.profile_container}>
-            <h1
-              ref={page2TitleRef}
-              className={`${styles.page2_title} ${
-                page2TitleIsVisible ? styles.animateLeft : ""
-              }`}
-            >
-              About me
-              {/* <p>{page2TitleIsVisible ? "yes" : "no"}</p> */}
-            </h1>
+            <h1 className={styles.page2_title}>About me</h1>
 
             <img className={styles.profile} src='/images/HHB.jpg' alt='HHB' />
-            <p className={styles.introduce1}>
+            <p
+              ref={page2Ref}
+              className={`${styles.introduce1} ${
+                page2IsVisible ? styles.animateleft : ""
+              }`}
+            >
               저는<span>&nbsp;긍정적인&nbsp;</span>프론트엔드 개발자
               <br />
               <span>방충림&nbsp;</span>입니다.
             </p>
-            <p className={styles.introduce2}>
+            <img
+              className={styles.obj1}
+              src='/images/main-object1.png'
+              alt='obj1'
+            />
+            <img
+              className={styles.obj1line}
+              src='/images/main-object1-line.png'
+              alt='obj1-line'
+            />
+            <p
+              ref={page2Ref}
+              className={`${styles.introduce2} ${
+                page2IsVisible ? styles.animateright : ""
+              }`}
+            >
               내 앞에 어려움이 닥쳐와도 긍정적인 마인드와 문제를 해결하고자 하는
               마인드만 있다면 무슨일이든 해결할 수 있다고 생각합니다.
               <br />
@@ -231,14 +248,30 @@ function App() {
         </section>
         <section className={`${styles.inner} ${styles.page3}`}>
           <h1 className={styles.page3_title}>Stacks</h1>
+          <img
+            className={styles.obj2_1}
+            src='/images/main-object2.png'
+            alt='obj1'
+          />
+          <img
+            className={styles.obj2_2}
+            src='/images/main-object2.png'
+            alt='obj1'
+          />
           <div className={styles.stackcontainer}>
-            <div>
+            <div
+              ref={page3Ref}
+              className={page3IsVisible ? styles.animateup1 : ""}
+            >
               <div>
                 <h3>Frontend</h3>
                 <img src='/images/front.png' alt='front' />
               </div>
             </div>
-            <div>
+            <div
+              ref={page3Ref}
+              className={page3IsVisible ? styles.animateup2 : ""}
+            >
               <div>
                 <h3>Backend</h3>
                 <img src='/images/back.png' alt='back' />
@@ -248,7 +281,10 @@ function App() {
                 <img src='/images/app.png' alt='app' />
               </div>
             </div>
-            <div>
+            <div
+              ref={page3Ref}
+              className={page3IsVisible ? styles.animateup3 : ""}
+            >
               <div>
                 <h3>Deployment</h3>
                 <img src='/images/deployment.png' alt='deployment' />
@@ -258,7 +294,10 @@ function App() {
                 <img src='/images/version.png' alt='version' />
               </div>
             </div>
-            <div>
+            <div
+              ref={page3Ref}
+              className={page3IsVisible ? styles.animateup4 : ""}
+            >
               <div>
                 <h3>Communication</h3>
                 <img src='/images/communication.png' alt='communication' />
@@ -307,9 +346,18 @@ function App() {
                   />
                 </div>
               </div>
-              <button>RESUME DOWNLOAD</button>
+              <a href='test.pdf' download='test.pdf'>
+                <button>RESUME DOWNLOAD</button>
+              </a>
             </div>
-            <div className={styles.sendemail}></div>
+            <div className={styles.sendemail}>
+              <img
+                src='/images/project1.png'
+                alt='email'
+                className={styles.emailImg}
+              />
+              <SendEmail />
+            </div>
           </div>
           <footer className={styles.footer}>
             <p>
