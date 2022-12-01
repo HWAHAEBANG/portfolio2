@@ -4,19 +4,19 @@ import styles from "./App.module.css";
 import Navbar from "./components/Navbar";
 import ReactPlayer from "react-player";
 import Page4 from "./pages/Page4.jsx";
-import emailjs from "@emailjs/browser";
+import Typewriter from "react-ts-typewriter";
 
 import { useInView } from "react-intersection-observer";
-import { SiResurrectionremixos } from "react-icons/si";
 import SendEmail from "./components/SendEmail";
 import BlueButton from "./components/ui/BlueButton";
+import { RxDoubleArrowDown } from "react-icons/rx";
 
 const filters = ["INTRO", "ABOUT", "STACKS", "PORTFOLIO", "CONTACT"];
 const DIVIDER_HEIGHT = 0;
 
 function App() {
   /* try */
-  const { ref: myRef, inView: myElementIsVisible /* entry */ } = useInView();
+  const { ref: page1Ref, inView: page1IsVisible /* entry */ } = useInView();
   const { ref: page2Ref, inView: page2IsVisible /* entry */ } = useInView();
   const { ref: page3Ref, inView: page3IsVisible /* entry */ } = useInView();
   const { ref: page4Ref, inView: page4IsVisible /* entry */ } = useInView();
@@ -153,7 +153,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setFilter(filters[scrollIndex]);
+    setFilter(filters[Math.floor(scrollIndex / 2)]);
     console.log(scrollIndex);
   }, [scrollIndex]);
   console.log(filter);
@@ -192,12 +192,24 @@ function App() {
             style={{ filter: scrollIndex === 0 ? "none" : "blur(5px)" }}
           />
           <div className={`${styles.inner} ${styles.page1_text}`}>
-            <h2 ref={myRef}>
-              혁신적인 아이디어 창출과
+            <h2 ref={page1Ref}>
+              {page1IsVisible ? (
+                <Typewriter
+                  text={
+                    "　　혁신적인 아이디어 창출과　　　 지속가능한 성장을 하는 개발자"
+                  }
+                  // loop={true}
+                  speed={100}
+                />
+              ) : (
+                ""
+              )}
               <br />
-              지속가능한 성장을 하는 개발자
             </h2>
-            {/* <p>{myElementIsVisible ? "yes" : "no"}</p> */}
+          </div>
+          <div className={styles.arrow_container}>
+            <RxDoubleArrowDown className={styles.arrow} />
+            <p>화면을 스크롤 하여 내려주세요</p>
           </div>
         </section>
         <section className={`${styles.inner} ${styles.page2}`}>

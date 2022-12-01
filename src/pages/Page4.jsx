@@ -35,7 +35,6 @@ export default function Page4({}) {
   const toNext = () => {
     setCheck((prev) => prev + 1);
     slidePx >= -2500 && setSlidePx(slidePx - 1000);
-
     setTimeout(() => {
       slidePx === -1500 && setSlidePx(1500);
       slidePx === -1500 && setCheck(2);
