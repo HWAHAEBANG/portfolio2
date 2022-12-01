@@ -9,6 +9,7 @@ import emailjs from "@emailjs/browser";
 import { useInView } from "react-intersection-observer";
 import { SiResurrectionremixos } from "react-icons/si";
 import SendEmail from "./components/SendEmail";
+import BlueButton from "./components/ui/BlueButton";
 
 const filters = ["INTRO", "ABOUT", "STACKS", "PORTFOLIO", "CONTACT"];
 const DIVIDER_HEIGHT = 0;
@@ -315,6 +316,11 @@ function App() {
           {/* text */}
         </section>
         <section className={`${styles.inner} ${styles.page5}`}>
+          <img
+            className={styles.obj3}
+            src='/images/main-object3.png'
+            alt='obj3'
+          />
           <div className={styles.contactcontainer}>
             <div className={styles.contact}>
               <h1 className={styles.page5_title}>Contact</h1>
@@ -347,7 +353,7 @@ function App() {
                 </div>
               </div>
               <a href='test.pdf' download='test.pdf'>
-                <button>RESUME DOWNLOAD</button>
+                <BlueButton text={"RESUME DOWNLOAD"} />
               </a>
             </div>
             <div className={styles.sendemail}>

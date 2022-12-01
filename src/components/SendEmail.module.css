@@ -1,13 +1,13 @@
 .container {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   position: absolute;
   top: 50px;
-  left: 23px;
+  left: 22px;
   background-color: white;
-  width: 761px;
+  width: 763px;
   height: 471px;
-  border-radius: 21px;
+  border-radius: 0 0 21px 21px;
 }
 
 .form {
@@ -15,9 +15,62 @@
   flex-direction: column;
 }
 
-.form input {
+.input_container {
+  position: relative;
+  height: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 40px;
+  text-align: right;
+  /* background-color: aquamarine; */
+  box-sizing: border-box;
 }
 
 .form label {
-  float: right;
+  width: 100px;
+  margin-left: 5px;
+  line-height: 40px;
+}
+
+.input_text {
+  box-sizing: border-box;
+  width: 600px;
+  height: 35px;
+  /* position: absolute; */
+  right: 0;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
+
+.form span {
+  font-size: 12px;
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.agree {
+  background-color: #e0e0e0;
+  font-size: 12px;
+  box-sizing: border-box;
+  margin: 10px 50px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.input_checkbox {
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+}
+
+textarea {
+  outline: none;
+  margin: 10px 40px 20px 40px;
+  height: 160px;
+  border: 1px solid #e0e0e0;
+}
+
+.button_container {
+  text-align: center;
+  /* background-color: aquamarine; */
 }

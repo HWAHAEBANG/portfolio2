@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Button from "../components/ui/Button";
+import GoldButton from "../components/ui/GoldButton";
 import styles from "./Page4.module.css";
 
 const projects = [
@@ -100,7 +100,7 @@ export default function Page4({}) {
                         <br />
                         <br />
                         <br />
-                        <Button text={"자세히 보기"} />
+                        <GoldButton text={"자세히 보기"} />
                       </p>
                     );
                   case 3:
@@ -130,7 +130,7 @@ export default function Page4({}) {
                         <br />
                         <br />
                         <br />
-                        <Button text={"자세히 보기"} />
+                        <GoldButton text={"자세히 보기"} />
                       </p>
                     );
                   case 4:
@@ -160,7 +160,7 @@ export default function Page4({}) {
                         <br />
                         <br />
                         <br />
-                        <Button text={"자세히 보기"} />
+                        <GoldButton text={"자세히 보기"} />
                       </p>
                     );
                   case 5:
@@ -188,7 +188,7 @@ export default function Page4({}) {
                         <br />
                         <br />
                         <br />
-                        <Button text={"자세히 보기"} />
+                        <GoldButton text={"자세히 보기"} />
                       </p>
                     );
                   default:
