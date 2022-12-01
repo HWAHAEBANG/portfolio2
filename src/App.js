@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./App.module.css";
 import Navbar from "./components/Navbar";
 import ReactPlayer from "react-player";
-import Page4 from "./pages/Page4.jsx";
+import Page4 from "./pages/Page7.jsx";
 import Typewriter from "react-ts-typewriter";
 
 import { useInView } from "react-intersection-observer";
@@ -21,6 +21,10 @@ function App() {
   const { ref: page3Ref, inView: page3IsVisible /* entry */ } = useInView();
   const { ref: page4Ref, inView: page4IsVisible /* entry */ } = useInView();
   const { ref: page5Ref, inView: page5IsVisible /* entry */ } = useInView();
+  const { ref: page6Ref, inView: page6IsVisible /* entry */ } = useInView();
+  const { ref: page7Ref, inView: page7IsVisible /* entry */ } = useInView();
+  const { ref: page8Ref, inView: page8IsVisible /* entry */ } = useInView();
+  const { ref: page9Ref, inView: page9IsVisible /* entry */ } = useInView();
 
   // const myRef = useRef();
   // const [myElementIsVisible, setMyElementIsVisible] = useState();
@@ -76,7 +80,7 @@ function App() {
             behavior: "smooth",
           });
           setScrollIndex(3);
-        } else if (scrollTop >= pageHeight * 4 && scrollTop < pageHeight * 4) {
+        } else if (scrollTop >= pageHeight * 3 && scrollTop < pageHeight * 4) {
           // 현재 4페이지
           // console.log("현재 4페이지, down");
           outerDivRef.current.scrollTo({
@@ -85,7 +89,8 @@ function App() {
             behavior: "smooth",
           });
           setScrollIndex(4);
-        } else {
+          /////////////
+        } else if (scrollTop >= pageHeight * 4 && scrollTop < pageHeight * 5) {
           // 현재 5페이지
           // console.log("현재 5페이지, down");
           outerDivRef.current.scrollTo({
@@ -93,11 +98,47 @@ function App() {
             left: 0,
             behavior: "smooth",
           });
-          setScrollIndex(4);
+          setScrollIndex(5);
+        } else if (scrollTop >= pageHeight * 5 && scrollTop < pageHeight * 6) {
+          // 현재 6페이지
+          // console.log("현재 6페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 6 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(6);
+        } else if (scrollTop >= pageHeight * 6 && scrollTop < pageHeight * 7) {
+          // 현재 7페이지
+          // console.log("현재 7페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 7 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(7);
+        } else if (scrollTop >= pageHeight * 7 && scrollTop < pageHeight * 8) {
+          // 현재 8페이지
+          // console.log("현재 8페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 8 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(8);
+        } else {
+          // 현재 9페이지
+          // console.log("현재 9페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 9 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(8);
         }
       } else {
         // 스크롤 올릴 때
-        if (scrollTop >= -1 && scrollTop < pageHeight) {
+        if (scrollTop >= 0 && scrollTop < pageHeight) {
           //현재 1페이지
           // console.log("현재 1페이지, up");
           outerDivRef.current.scrollTo({
@@ -115,7 +156,7 @@ function App() {
             behavior: "smooth",
           });
           setScrollIndex(0);
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
+        } else if (scrollTop >= pageHeight * 2 && scrollTop < pageHeight * 3) {
           // 현재 3페이지
           // console.log("현재 3페이지, up");
           outerDivRef.current.scrollTo({
@@ -124,7 +165,7 @@ function App() {
             behavior: "smooth",
           });
           setScrollIndex(1);
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 4) {
+        } else if (scrollTop >= pageHeight * 3 && scrollTop < pageHeight * 4) {
           // 현재 4페이지
           // console.log("현재 4페이지, up");
           outerDivRef.current.scrollTo({
@@ -133,7 +174,8 @@ function App() {
             behavior: "smooth",
           });
           setScrollIndex(2);
-        } else {
+          ////////////
+        } else if (scrollTop >= pageHeight * 4 && scrollTop < pageHeight * 5) {
           // 현재 5페이지
           // console.log("현재 5페이지, up");
           outerDivRef.current.scrollTo({
@@ -142,6 +184,42 @@ function App() {
             behavior: "smooth",
           });
           setScrollIndex(3);
+        } else if (scrollTop >= pageHeight * 5 && scrollTop < pageHeight * 6) {
+          // 현재 6페이지
+          // console.log("현재 6페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 4 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(4);
+        } else if (scrollTop >= pageHeight * 6 && scrollTop < pageHeight * 7) {
+          // 현재 7페이지
+          // console.log("현재 7페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 5 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(5);
+        } else if (scrollTop >= pageHeight * 7 && scrollTop < pageHeight * 8) {
+          // 현재 8페이지
+          // console.log("현재 8페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 6 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(6);
+        } else {
+          // 현재 9페이지
+          // console.log("현재 9페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 7 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(7);
         }
       }
     };
@@ -212,15 +290,16 @@ function App() {
             <p>화면을 스크롤 하여 내려주세요</p>
           </div>
         </section>
-        <section className={`${styles.inner} ${styles.page2}`}>
+        <section className={`${styles.inner} ${styles.page2}`}></section>
+        <section className={`${styles.inner} ${styles.page3}`}>
           <div className={styles.profile_container}>
-            <h1 className={styles.page2_title}>About me</h1>
+            <h1 className={styles.page3_title}>About me</h1>
 
             <img className={styles.profile} src='/images/HHB.jpg' alt='HHB' />
             <p
-              ref={page2Ref}
+              ref={page3Ref}
               className={`${styles.introduce1} ${
-                page2IsVisible ? styles.animateleft : ""
+                page3IsVisible ? styles.animateleft : ""
               }`}
             >
               저는<span>&nbsp;긍정적인&nbsp;</span>프론트엔드 개발자
@@ -259,8 +338,9 @@ function App() {
             </p>
           </div>
         </section>
-        <section className={`${styles.inner} ${styles.page3}`}>
-          <h1 className={styles.page3_title}>Stacks</h1>
+        <section className={`${styles.inner} ${styles.page4}`}></section>
+        <section className={`${styles.inner} ${styles.page5}`}>
+          <h1 className={styles.page5_title}>Stacks</h1>
           <img
             className={styles.obj2_1}
             src='/images/main-object2.png'
@@ -273,8 +353,8 @@ function App() {
           />
           <div className={styles.stackcontainer}>
             <div
-              ref={page3Ref}
-              className={page3IsVisible ? styles.animateup1 : ""}
+              ref={page5Ref}
+              className={page5IsVisible ? styles.animateup1 : ""}
             >
               <div>
                 <h3>Frontend</h3>
@@ -282,8 +362,8 @@ function App() {
               </div>
             </div>
             <div
-              ref={page3Ref}
-              className={page3IsVisible ? styles.animateup2 : ""}
+              ref={page5Ref}
+              className={page5IsVisible ? styles.animateup2 : ""}
             >
               <div>
                 <h3>Backend</h3>
@@ -295,8 +375,8 @@ function App() {
               </div>
             </div>
             <div
-              ref={page3Ref}
-              className={page3IsVisible ? styles.animateup3 : ""}
+              ref={page5Ref}
+              className={page5IsVisible ? styles.animateup3 : ""}
             >
               <div>
                 <h3>Deployment</h3>
@@ -308,8 +388,8 @@ function App() {
               </div>
             </div>
             <div
-              ref={page3Ref}
-              className={page3IsVisible ? styles.animateup4 : ""}
+              ref={page5Ref}
+              className={page5IsVisible ? styles.animateup4 : ""}
             >
               <div>
                 <h3>Communication</h3>
@@ -322,12 +402,12 @@ function App() {
             </div>
           </div>
         </section>
-        <section className={`${styles.inner} ${styles.page4}`}>
-          {/* text */}
+        <section className={`${styles.inner} ${styles.page6}`}></section>
+        <section className={`${styles.inner} ${styles.page7}`}>
           <Page4 />
-          {/* text */}
         </section>
-        <section className={`${styles.inner} ${styles.page5}`}>
+        <section className={`${styles.inner} ${styles.page8}`}></section>
+        <section className={`${styles.inner} ${styles.page9}`}>
           <img
             className={styles.obj3}
             src='/images/main-object3.png'
@@ -335,7 +415,7 @@ function App() {
           />
           <div className={styles.contactcontainer}>
             <div className={styles.contact}>
-              <h1 className={styles.page5_title}>Contact</h1>
+              <h1 className={styles.page9_title}>Contact</h1>
               <p>
                 아직 많이 부족한 저의 포트폴리오를 봐주셔서 감사합니다.
                 <br />
