@@ -1,0 +1,84 @@
+.medal {
+  position: absolute;
+  width: 190px;
+  height: 160px;
+  /* background-color: aqua; */
+}
+
+.medal .front {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  width: 190px;
+  background: rgb(25, 58, 97);
+  background: linear-gradient(
+    30deg,
+    rgba(25, 58, 97, 1) 37%,
+    rgba(3, 13, 27, 1) 100%
+  );
+  clip-path: polygon(25% 0%, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  backface-visibility: hidden;
+  transition: 0.5s;
+  /* border: 2px solid red; */
+  /* perspective: 600px; */
+  transform: rotateX(0deg);
+}
+
+.medal:hover .front {
+  transform: rotateX(180deg);
+}
+
+.front img {
+  margin-top: 5px;
+  width: 130px;
+  /* height: 100px; */
+  transform: scale(0.7);
+}
+
+.blink {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 150px;
+  height: 160px;
+  clip-path: polygon(29% 5%, 85% 5%, 93% 18%, 28% 93%, 1% 49%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    30deg,
+    rgba(255, 255, 255, 0.0817533343025808) 37%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  z-index: 1;
+}
+
+.medal .back {
+  position: absolute;
+
+  height: 160px;
+  width: 190px;
+  background-color: var(--darkgray-color);
+  clip-path: polygon(25% 0%, 76% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  backface-visibility: hidden;
+  transition: 0.5s;
+  /* perspective: 600px; */
+  transform: rotateX(-180deg);
+  text-align: center;
+}
+
+.medal:hover .back {
+  transform: rotateX(0deg);
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.inner {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  height: 144px;
+  width: 170px;
+  clip-path: polygon(25% 0%, 76% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: red;
+}

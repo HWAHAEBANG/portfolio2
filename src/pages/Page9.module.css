@@ -1,0 +1,124 @@
+.obj3 {
+  position: absolute;
+  right: -300px;
+  bottom: 70px;
+  filter: brightness(0.6);
+  /* z-index: 1; */
+}
+
+.page9_title {
+  font-family: "Playfair Display", serif;
+  font-size: 70px;
+  font-weight: 900;
+  margin: 0;
+  z-index: 1;
+  color: var(--brand-color);
+}
+
+.contactcontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: 600px;
+  width: 1200px;
+  /* padding-bottom: 10%; */
+  box-sizing: border-box;
+  /* background-color: aqua; */
+}
+
+.contact {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  /* background-color: gray; */
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.contact p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  color: var(--darkgray-color);
+}
+
+.contact :nth-child(4) {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.infocontainer {
+  display: flex;
+  /* background-color: teal; */
+  margin-bottom: 20px;
+}
+
+.info {
+  /* background-color: bisque; */
+}
+
+.qrcontainer {
+  margin-left: 20px;
+  width: 30%;
+  text-align: center;
+  /* background-color: aliceblue; */
+}
+
+.qrcontainer p {
+  font-size: 15px;
+  color: var(--brand-color);
+  margin: 0px;
+}
+
+.qrcode {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid var(--brand-color);
+}
+
+.contact button {
+  /* position: absolute; */
+  /* left: 50%; */
+  background-color: var(--brand-color);
+  border: none;
+  border-radius: 25px;
+  padding: 15px 20px;
+  color: white;
+}
+
+.sendemail {
+  width: 65%;
+  height: 100%;
+  margin-bottom: 300px;
+  /* background-color: aliceblue; */
+  margin-bottom: 250px;
+  border-radius: 40px;
+  position: relative;
+}
+
+.emailImg {
+  position: absolute;
+  width: 807px;
+  z-index: -1;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  background-color: var(--darkgray-color);
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+  line-height: 30px;
+}

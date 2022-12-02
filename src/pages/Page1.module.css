@@ -1,0 +1,50 @@
+.react_player {
+  position: fixed;
+  z-index: -100;
+  transition: all 1s ease-in-out;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+.page1_text {
+  /* position: absolute; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 820px;
+  height: 200px;
+  color: var(--darkgray-color);
+  /* background-color: aquamarine; */
+  font-family: "Noto Sans KR", sans-serif;
+  /* text-shadow: 3px 3px 1px lightgray; */
+}
+
+.arrow_container {
+  position: absolute;
+  bottom: 2%;
+  /* background-color: aqua; */
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--darkgray-color);
+}
+
+.arrow {
+  color: var(--brand-color);
+  width: 150px;
+  height: 150px;
+  /* background-color: aqua; */
+  transform: translate(0, 20px);
+  transition: all 0.5s ease-in-out;
+  animation: motion 0.4s linear 0s infinite alternate;
+}
+
+@keyframes motion {
+  0% {
+    transform: translate(0, -5%);
+  }
+  100% {
+    transform: translate(0, 5%);
+  }
+}

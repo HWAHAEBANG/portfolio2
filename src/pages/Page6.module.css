@@ -1,0 +1,19 @@
+.bee_container {
+  position: relative;
+  width: 780px;
+  height: 650px;
+  margin-top: 40px;
+  /* background-color: aquamarine; */
+  transform: translate(0, 20px);
+  transition: all 0.5s ease-in-out;
+  /* animation: motion 1s linear 0s infinite alternate; */
+}
+
+@keyframes motion {
+  0% {
+    transform: translate(0, -1%);
+  }
+  100% {
+    transform: translate(0, 1%);
+  }
+}

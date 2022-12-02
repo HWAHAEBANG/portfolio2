@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useInView } from "react-intersection-observer";
 import GoldButton from "../components/ui/GoldButton";
 import styles from "./Page7.module.css";
 
@@ -15,12 +16,8 @@ const projects = [
 ];
 
 export default function Page7({}) {
-  /* test */
+  const { ref: page7Ref, inView: page7IsVisible /* entry */ } = useInView();
   const [check, setCheck] = useState(2);
-
-  // console.log(projects[che]);
-  /* test */
-
   const [slidePx, setSlidePx] = useState(1500);
 
   const toPrev = () => {
