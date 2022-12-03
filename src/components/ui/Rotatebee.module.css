@@ -1,8 +1,25 @@
+.motion {
+  animation-duration: 1s;
+  animation-name: motion;
+}
+
+@keyframes motion {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .medal {
   position: absolute;
   width: 190px;
   height: 160px;
   /* background-color: aqua; */
+  clip-path: polygon(25% 0%, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  /*  */
+  transition: all 0.5s ease-in-out;
 }
 
 .medal .front {
@@ -58,19 +75,37 @@
 
   height: 160px;
   width: 190px;
-  background-color: var(--darkgray-color);
+  background: rgb(64, 64, 64);
+  background: linear-gradient(
+    30deg,
+    rgba(64, 64, 64, 1) 37%,
+    rgba(5, 5, 5, 1) 100%
+  );
   clip-path: polygon(25% 0%, 76% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   backface-visibility: hidden;
   transition: 0.5s;
   /* perspective: 600px; */
   transform: rotateX(-180deg);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .medal:hover .back {
   transform: rotateX(0deg);
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
   z-index: 1;
+}
+
+.text {
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+  /* background-color: aqua; */
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .inner {

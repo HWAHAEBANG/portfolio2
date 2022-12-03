@@ -1,9 +1,76 @@
+.main_container {
+  position: relative;
+  display: flex;
+  width: 1300px;
+  height: 650px;
+  /* background-color: aqua; */
+}
+
+.text_container {
+  position: relative;
+  /* background-color: aquamarine; */
+  width: 500px;
+  height: 100%;
+}
+
+.page6_title {
+  /* position: absolute; */
+  font-family: "Playfair Display", serif;
+  font-size: 100px;
+  font-weight: 900;
+  margin: 0;
+  /* line-height: 20px; */
+  z-index: 1;
+  color: var(--brand-color);
+}
+
+.certificate {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  font-weight: 900;
+  margin: 0;
+  line-height: 20px;
+  z-index: 1;
+  color: var(--brand-color);
+}
+
+.certificate_title {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--darkgray-color);
+}
+
+.certificate_text {
+  font-size: 13px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--darkgray-color);
+}
+
+.popup {
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  width: 500px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 25px;
+  z-index: 2;
+  font-size: 35px;
+  text-align: center;
+  line-height: 100px;
+  color: var(--darkgray-color);
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+}
+
 .bee_container {
   position: relative;
   width: 780px;
   height: 650px;
-  margin-top: 40px;
-  /* background-color: aquamarine; */
+  /* margin-top: 40px; */
+  /* background-color: gray; */
   transform: translate(0, 20px);
   transition: all 0.5s ease-in-out;
   /* animation: motion 1s linear 0s infinite alternate; */
