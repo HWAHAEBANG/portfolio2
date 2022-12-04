@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@400;700;900&family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+KR:wght@100;300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@400;700;900&family=Zen+Dots&display=swap");
 
 :root {
   --brand-color: #00346b;
@@ -13,6 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  accent-color: var(--brand-color);
 }
 
 code {

@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./SendEmail.module.css";
 import emailjs from "@emailjs/browser";
 import BlueButton from "./ui/BlueButton";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function SendEmail() {
   const form = useRef();
@@ -21,9 +22,23 @@ export default function SendEmail() {
           (result) => {
             console.log(result.text);
             e.target.reset();
+            toast.success("성공적으로 전송되었습니다!", {
+              style: {
+                maxWidth: "1000px",
+                width: "300px",
+                fontSize: "20px",
+              },
+            });
           },
           (error) => {
             console.log(error.text);
+            toast.error("전송에 실패하였습니다. 다시 시도해주시기 바랍니다.", {
+              style: {
+                maxWidth: "1000px",
+                width: "530px",
+                fontSize: "20px",
+              },
+            });
           }
         );
   };

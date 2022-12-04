@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import GoldButton from "../components/ui/GoldButton";
 import styles from "./Page7.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const projects = [
   "/images/project3.png",
@@ -38,10 +39,51 @@ export default function Page7({}) {
     }, 300);
   };
 
+  const notify = () =>
+    toast("슬라이드에 마우스 커서를 올려보세요", {
+      duration: 4000,
+      position: "bottom-right",
+
+      // Styling
+      style: {
+        maxWidth: "420px",
+        width: "420px",
+        fontSize: "20px",
+        fontWeight: "700",
+      },
+      className: "",
+
+      // Custom Icon
+      icon: "😉",
+
+      // Change colors of success/error/loading icon
+      iconTheme: {
+        primary: "#000",
+        secondary: "#fff",
+      },
+
+      // Aria
+      ariaProps: {
+        role: "status",
+        "aria-live": "polite",
+      },
+    });
+
+  useEffect(() => {
+    if (page7IsVisible) {
+      notify();
+    }
+  }, [page7IsVisible]);
+
   return (
     <div className={styles.mainBox}>
       <h1 className={styles.page4_title}>Portfolio</h1>
-      <ul className={styles.projectList}>
+      <ul
+        className={`${styles.projectList} ${
+          page7IsVisible ? styles.motion : ""
+        }`}
+        ref={page7Ref}
+      >
         {projects.map((project, index) => (
           <li
             key={index}
@@ -206,6 +248,9 @@ export default function Page7({}) {
           // style={{ display: slidePx === -4125 ? "none" : "" }}
         />
       </ul>
+      <div>
+        <Toaster />
+      </div>
     </div>
   );
 }

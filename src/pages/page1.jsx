@@ -4,9 +4,43 @@ import ReactPlayer from "react-player";
 import Typewriter from "react-ts-typewriter";
 import { RxDoubleArrowDown } from "react-icons/rx";
 import { useInView } from "react-intersection-observer";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Page1({ scrollIndex }) {
   const { ref: page1Ref, inView: page1IsVisible /* entry */ } = useInView();
+  const notify = () =>
+    toast(
+      (t) => (
+        <span>
+          이 페이지는 ReactJS로 제작되었습니다.
+          <br />
+          <b>제작 과정이 궁금하시다면 버튼을 클릭해주세요</b>
+          <a
+            href='https://www.notion.so/REACT-Portfolio-56b64ea41af147bf96922fc5b9a014da'
+            target='_blank'
+          >
+            <button
+              // onClick={() => toast.dismiss(t.id)}
+              style={{ marginLeft: "10px", padding: "1px 10px" }}
+            >
+              자세히 보기
+            </button>
+          </a>
+        </span>
+      ),
+      {
+        position: "bottom-left",
+        style: { maxWidth: "5000px", width: "550px", fontSize: "20px" },
+        duration: 8000,
+      }
+    );
+
+  useEffect(() => {
+    if (page1IsVisible) {
+      notify();
+    }
+  }, [page1IsVisible]);
+
   return (
     <>
       <ReactPlayer
@@ -14,9 +48,9 @@ export default function Page1({ scrollIndex }) {
         url={process.env.PUBLIC_URL + "/videos/beehouse.mp4"}
         height='150vh'
         width='auto'
-        // playing={true}
+        playing={scrollIndex === 0 ? true : false}
         controls={false}
-        // loop={true}
+        loop={true}
         muted={true}
         style={{ filter: scrollIndex === 0 ? "none" : "blur(7px)" }}
       />
@@ -27,8 +61,9 @@ export default function Page1({ scrollIndex }) {
               text={
                 "　　혁신적인 아이디어 창출과　　　 지속가능한 성장을 하는 개발자"
               }
-              // loop={true}
+              loop={true}
               speed={100}
+              delay={3000}
             />
           ) : (
             ""
@@ -40,6 +75,7 @@ export default function Page1({ scrollIndex }) {
         <RxDoubleArrowDown className={styles.arrow} />
         <p>화면을 스크롤 하여 내려주세요</p>
       </div>
+      <Toaster style={{}} position='bottom-center' />
     </>
   );
 }

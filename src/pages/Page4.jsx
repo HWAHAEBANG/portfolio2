@@ -33,7 +33,8 @@ export default function Page4() {
             ref={page4Ref}
           ></div>
           <p className={styles.text}>
-            내가 하는 일에 책임감을 가지고 일을 해낼 수 있습니다.
+            워라벨이 집착하지 않기보다, 원하는 수준의 결과물이 나올 때 까지
+            끝없이 고민합니다.
           </p>
         </div>
       </div>
@@ -63,7 +64,7 @@ export default function Page4() {
             ref={page4Ref}
           ></div>
           <p className={styles.text}>
-            배우는데 겁내지 않고 학습하며 발전해 나갈 수 있습니다.
+            자기계발과 업무능력 향상에 여가시간을 할애하는 것을 선호합니다.
           </p>
         </div>
       </div>

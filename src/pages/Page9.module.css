@@ -28,6 +28,22 @@
   /* background-color: aqua; */
 }
 
+.motion {
+  animation-duration: 2s;
+  animation-name: animate-left;
+}
+
+@keyframes animate-left {
+  0% {
+    transform: translate(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
 .contact {
   position: relative;
   width: 35%;

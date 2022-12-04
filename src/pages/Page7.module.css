@@ -1,11 +1,12 @@
 .mainBox {
   /* position: relative; */
   /* background-color: aqua; */
+  margin-top: 80px;
 }
 
 .page4_title {
   font-family: "Playfair Display", serif;
-  font-size: 60px;
+  font-size: 100px;
   font-weight: 900;
   margin: 0 0 0 30px;
   z-index: 1;
@@ -20,6 +21,22 @@
   justify-content: center;
   /* position: absolute; */
   /* height: 1000px; */
+}
+
+.motion {
+  animation-duration: 1s;
+  animation-name: animate-bottom;
+}
+
+@keyframes animate-bottom {
+  0% {
+    transform: translate(0, 15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 .projectList li {

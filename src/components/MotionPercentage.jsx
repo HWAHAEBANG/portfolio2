@@ -8,7 +8,7 @@ export default function MotionPercentage({ limit, start }) {
     if (start) {
       const num = setInterval(() => {
         setPercentage((prev) => prev + 1);
-      }, 1);
+      }, 5);
       if (percentage === limit) {
         clearInterval(num);
       }

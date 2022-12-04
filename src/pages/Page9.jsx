@@ -10,7 +10,10 @@ export default function Page9() {
     <>
       <img className={styles.obj3} src='/images/main-object3.png' alt='obj3' />
       <div className={styles.contactcontainer}>
-        <div className={styles.contact}>
+        <div
+          className={`${styles.contact} ${page9IsVisible ? styles.motion : ""}`}
+          ref={page9Ref}
+        >
           <h1 className={styles.page9_title}>Contact</h1>
           <p>
             아직 많이 부족한 저의 포트폴리오를 봐주셔서 감사합니다.

@@ -9,8 +9,9 @@
 .text_container {
   position: relative;
   /* background-color: aquamarine; */
-  width: 500px;
+  width: 300px;
   height: 100%;
+  margin-right: 100px;
 }
 
 .page6_title {
@@ -24,12 +25,37 @@
   color: var(--brand-color);
 }
 
+.explain_container {
+  height: 230px;
+  /* background-color: aqua; */
+  color: var(--darkgray-color);
+  /* transition: all 2s ease-in-out; */
+}
+
+.explain_title {
+  font-size: 50px;
+  /* background-color: aqua; */
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Bangers", cursive;
+}
+
+.explain_text {
+  font-size: 15px;
+  /* background-color: aquamarine; */
+  line-height: 30px;
+  margin: 0;
+  font-weight: 700;
+}
+
 .certificate {
   position: relative;
   font-family: "Playfair Display", serif;
   font-size: 50px;
   font-weight: 900;
   margin: 0;
+  margin-top: 50px;
   line-height: 20px;
   z-index: 1;
   color: var(--brand-color);
@@ -46,23 +72,6 @@
   font-size: 13px;
   font-family: "Noto Sans KR", sans-serif;
   color: var(--darkgray-color);
-}
-
-.popup {
-  position: absolute;
-  top: 40%;
-  left: 18%;
-  width: 500px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 25px;
-  z-index: 2;
-  font-size: 35px;
-  text-align: center;
-  line-height: 100px;
-  color: var(--darkgray-color);
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 700;
 }
 
 .bee_container {

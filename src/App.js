@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 import styles from "./App.module.css";
 import Navbar from "./components/Navbar";
+import Popup from "./components/Popup";
 
 import Page1 from "./pages/Page1";
 import Page2 from "./pages/Page2";
@@ -232,6 +233,7 @@ function App() {
 
   return (
     <>
+      <Popup />
       <div ref={outerDivRef} className={styles.outer}>
         <Navbar filters={filters} filter={filter} onClick={handleClick} />
         {/* <Dots /> */}
