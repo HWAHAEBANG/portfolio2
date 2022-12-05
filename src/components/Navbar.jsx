@@ -10,7 +10,7 @@ export default function Navbar({ filters, filter, onClick }) {
           <img
             className={styles.icon}
             src='https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0e764cf6-d5a5-446f-8dc0-2c863d776465%2Fhhb.png?table=block&id=5f3fdec1-e37b-4879-8f47-12432456de0e&spaceId=b32eb4a8-c75f-494e-8df5-f778d7b1051e&width=250&userId=4dd8bab0-9aaf-42d0-b101-0e8e009c785c&cache=v2'
-            alt=''
+            alt='icon'
           />
           <span className={styles.name}>HHB</span>
         </div>
@@ -31,10 +31,15 @@ export default function Navbar({ filters, filter, onClick }) {
           <a
             href='https://lake-magician-e71.notion.site/HHB-5f3fdec1e37b48798f4712432456de0e'
             target='_blank'
+            rel='noopener noreferrer'
           >
             <SiNotion className={styles.notionBtn} />
           </a>
-          <a href='https://github.com/HWAHAEBANG' target='_blank'>
+          <a
+            href='https://github.com/HWAHAEBANG'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <SiGithub className={styles.githubBtn} />
           </a>
         </div>

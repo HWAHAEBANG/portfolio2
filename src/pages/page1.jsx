@@ -18,6 +18,7 @@ export default function Page1({ scrollIndex }) {
           <a
             href='https://www.notion.so/REACT-Portfolio-56b64ea41af147bf96922fc5b9a014da'
             target='_blank'
+            rel='noopener noreferrer'
           >
             <button
               // onClick={() => toast.dismiss(t.id)}
