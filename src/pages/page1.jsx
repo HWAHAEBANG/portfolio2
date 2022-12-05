@@ -45,7 +45,7 @@ export default function Page1({ scrollIndex }) {
     <>
       <ReactPlayer
         className={styles.react_player}
-        url={process.env.PUBLIC_URL + "/videos/beehouse2.mp4"}
+        url={process.env.PUBLIC_URL + "/videos/beehouse3.mp4"}
         height='150vh'
         width='auto'
         playing={scrollIndex < 3 ? true : false}
