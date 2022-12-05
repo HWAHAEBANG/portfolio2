@@ -52,7 +52,7 @@ export default function Page6() {
     // console.log(e.target.firstElementChild.outerText);
   };
 
-  console.log(explain);
+  //⚠⚠⚠ 아이콘 호버했을 떄, text 업데이트가 종종 반응하지 않는 버그가 있음 개선 필요!!!!
   return (
     <div className={styles.main_container}>
       <div className={styles.text_container}>

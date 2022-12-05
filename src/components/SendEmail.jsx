@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./SendEmail.module.css";
 import emailjs from "@emailjs/browser";
 import BlueButton from "./ui/BlueButton";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function SendEmail() {
   const form = useRef();
@@ -101,9 +101,14 @@ export default function SendEmail() {
               onChange={handleChange}
             />
           </div>
-          <textarea name='message' cols='30' rows='10'></textarea>
+          <textarea
+            name='message'
+            cols='30'
+            rows='10'
+            placeholder='내용을 입력해주세요'
+          ></textarea>
           <div className={styles.button_container}>
-            <BlueButton text={"Send Message"} check={check} />
+            <BlueButton text={"Send Mail"} check={check} />
           </div>
         </form>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import styles from "./Page1.module.css";
 import ReactPlayer from "react-player";
 import Typewriter from "react-ts-typewriter";
@@ -45,10 +45,10 @@ export default function Page1({ scrollIndex }) {
     <>
       <ReactPlayer
         className={styles.react_player}
-        url={process.env.PUBLIC_URL + "/videos/beehouse.mp4"}
+        url={process.env.PUBLIC_URL + "/videos/beehouse2.mp4"}
         height='150vh'
         width='auto'
-        playing={scrollIndex === 0 ? true : false}
+        playing={scrollIndex < 3 ? true : false}
         controls={false}
         loop={true}
         muted={true}

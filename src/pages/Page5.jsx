@@ -6,7 +6,9 @@ export default function Page5() {
   const { ref: page5Ref, inView: page5IsVisible /* entry */ } = useInView();
   return (
     <>
-      <h1 className={styles.page5_title}>Stacks</h1>
+      <h1 className={styles.page5_title}>
+        Stack(갈아엎고 다음 슬라이드를 메인으로 쓸 예정)
+      </h1>
       <img
         className={styles.obj2_1}
         src='/images/main-object2.png'
