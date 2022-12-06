@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import styles from "./App.module.css";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Popup from "./components/Popup";
 
@@ -234,34 +234,34 @@ function App() {
   return (
     <>
       <Popup />
-      <div ref={outerDivRef} className={styles.outer}>
+      <div ref={outerDivRef} className='outer'>
         <Navbar filters={filters} filter={filter} onClick={handleClick} />
         {/* <Dots /> */}
-        <section className={`${styles.inner} ${styles.page1}`}>
+        <section className='inner page1'>
           <Page1 scrollIndex={scrollIndex} />
         </section>
-        <section className={`${styles.inner} ${styles.page2}`}>
+        <section className='inner page2'>
           <Page2 />
         </section>
-        <section className={`${styles.inner} ${styles.page3}`}>
+        <section className='inner page3'>
           <Page3 />
         </section>
-        <section className={`${styles.inner} ${styles.page4}`}>
+        <section className='inner page4'>
           <Page4 />
         </section>
-        <section className={`${styles.inner} ${styles.page5}`}>
+        <section className='inner page5'>
           <Page5 />
         </section>
-        <section className={`${styles.inner} ${styles.page6}`}>
+        <section className='inner page6'>
           <Page6 />
         </section>
-        <section className={`${styles.inner} ${styles.page7}`}>
+        <section className='inner page7'>
           <Page7 />
         </section>
-        <section className={`${styles.inner} ${styles.page8}`}>
+        <section className='inner page8'>
           <Page8 />
         </section>
-        <section className={`${styles.inner} ${styles.page9}`}>
+        <section className='inner page9'>
           <Page9 />
         </section>
       </div>
