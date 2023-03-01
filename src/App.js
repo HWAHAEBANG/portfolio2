@@ -4,15 +4,15 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Popup from "./components/Popup";
 
-import Page1 from "./pages/Page1test"; // 버그수정 완료
-import Page2 from "./pages/Page2";
-import Page3 from "./pages/Page3";
-import Page4 from "./pages/Page4";
-import Page5 from "./pages/Page5";
-import Page6 from "./pages/Page6";
-import Page7 from "./pages/Page7";
-import Page8 from "./pages/Page8";
-import Page9 from "./pages/Page9";
+import Page1 from "./pages/Page1t"; // 버그수정 완료
+import Page2 from "./pages/Page2t";
+import Page3 from "./pages/Page3t";
+import Page4 from "./pages/Page4t";
+import Page5 from "./pages/Page5t";
+import Page6 from "./pages/Page6t";
+import Page7 from "./pages/Page7t";
+import Page8 from "./pages/Page8t";
+import Page9 from "./pages/Page9t";
 
 const filters = ["INTRO", "ABOUT", "STACKS", "PORTFOLIO", "CONTACT"];
 const DIVIDER_HEIGHT = 0;
