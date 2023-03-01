@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Popup from "./components/Popup";
 
-import Page1 from "./pages/Page1";
+import Page1 from "./pages/Page1"; // 버그수정 완료
 import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
 import Page4 from "./pages/Page4";
