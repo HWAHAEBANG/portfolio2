@@ -209,6 +209,213 @@ function App() {
     };
   }, []);
 
+  // 모바일 버전용=======================================================================================
+  useEffect(() => {
+    let startY;
+    let endY;
+
+    const touchStartHandler = (e) => {
+      startY = e.touches[0].clientY;
+    };
+
+    const touchMoveHandler = (e) => {
+      endY = e.touches[0].clientY;
+    };
+
+    const touchEndHandler = () => {
+      const diffY = startY - endY;
+      const pageHeight = window.innerHeight;
+      const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
+
+      if (diffY > 0) {
+        // 스크롤 아래로
+        // 이하 코드는 스크롤 아래로 움직일 때의 동작을 처리합니다.
+        if (scrollTop >= 0 && scrollTop < pageHeight) {
+          //현재 1페이지
+          // console.log("현재 1페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(1);
+        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
+          //현재 2페이지
+          // console.log("현재 2페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 2 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(2);
+        } else if (scrollTop >= pageHeight * 2 && scrollTop < pageHeight * 3) {
+          // 현재 3페이지
+          // console.log("현재 3페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 3 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(3);
+        } else if (scrollTop >= pageHeight * 3 && scrollTop < pageHeight * 4) {
+          // 현재 4페이지
+          // console.log("현재 4페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 4 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(4);
+          /////////////
+        } else if (scrollTop >= pageHeight * 4 && scrollTop < pageHeight * 5) {
+          // 현재 5페이지
+          // console.log("현재 5페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 5 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(5);
+        } else if (scrollTop >= pageHeight * 5 && scrollTop < pageHeight * 6) {
+          // 현재 6페이지
+          // console.log("현재 6페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 6 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(6);
+        } else if (scrollTop >= pageHeight * 6 && scrollTop < pageHeight * 7) {
+          // 현재 7페이지
+          // console.log("현재 7페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 7 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(7);
+        } else if (scrollTop >= pageHeight * 7 && scrollTop < pageHeight * 8) {
+          // 현재 8페이지
+          // console.log("현재 8페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 8 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(8);
+        } else {
+          // 현재 9페이지
+          // console.log("현재 9페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 9 + DIVIDER_HEIGHT * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(8);
+        }
+      } else {
+        // 스크롤 위로
+        // 이하 코드는 스크롤 위로 움직일 때의 동작을 처리합니다.
+        // 스크롤 올릴 때
+        if (scrollTop >= 0 && scrollTop < pageHeight) {
+          //현재 1페이지
+          // console.log("현재 1페이지, up");
+          outerDivRef.current.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(0);
+        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
+          //현재 2페이지
+          // console.log("현재 2페이지, up");
+          outerDivRef.current.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(0);
+        } else if (scrollTop >= pageHeight * 2 && scrollTop < pageHeight * 3) {
+          // 현재 3페이지
+          // console.log("현재 3페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(1);
+        } else if (scrollTop >= pageHeight * 3 && scrollTop < pageHeight * 4) {
+          // 현재 4페이지
+          // console.log("현재 4페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 2 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(2);
+          ////////////
+        } else if (scrollTop >= pageHeight * 4 && scrollTop < pageHeight * 5) {
+          // 현재 5페이지
+          // console.log("현재 5페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 3 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(3);
+        } else if (scrollTop >= pageHeight * 5 && scrollTop < pageHeight * 6) {
+          // 현재 6페이지
+          // console.log("현재 6페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 4 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(4);
+        } else if (scrollTop >= pageHeight * 6 && scrollTop < pageHeight * 7) {
+          // 현재 7페이지
+          // console.log("현재 7페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 5 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(5);
+        } else if (scrollTop >= pageHeight * 7 && scrollTop < pageHeight * 8) {
+          // 현재 8페이지
+          // console.log("현재 8페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 6 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(6);
+        } else {
+          // 현재 9페이지
+          // console.log("현재 9페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 7 + DIVIDER_HEIGHT,
+            left: 0,
+            behavior: "smooth",
+          });
+          setScrollIndex(7);
+        }
+      }
+    };
+
+    const outerDivRefCurrent = outerDivRef.current;
+    outerDivRefCurrent.addEventListener("touchstart", touchStartHandler);
+    outerDivRefCurrent.addEventListener("touchmove", touchMoveHandler);
+    outerDivRefCurrent.addEventListener("touchend", touchEndHandler);
+
+    return () => {
+      outerDivRefCurrent.removeEventListener("touchstart", touchStartHandler);
+      outerDivRefCurrent.removeEventListener("touchmove", touchMoveHandler);
+      outerDivRefCurrent.removeEventListener("touchend", touchEndHandler);
+    };
+  }, []);
+  //====================================================================================================
+
   useEffect(() => {
     setFilter(filters[Math.floor(scrollIndex / 2)]);
     console.log(scrollIndex);
